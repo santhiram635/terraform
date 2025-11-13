@@ -1,5 +1,5 @@
-data "aws_ami" "mokshi" {
-    owners           = ["503492728717"]
+data "aws_ami" "joindevops" {
+    owners           = ["973714476881"]
     most_recent      = true
     
     filter {
@@ -19,7 +19,7 @@ data "aws_ami" "mokshi" {
 }
 
 output "ami_id" {
-    value = data.aws_ami.mokshi.id
+    value = data.aws_ami.joindevops.id
 }
 
 
