@@ -1,5 +1,5 @@
 data "aws_ami" "joindevops" {
-    owners           = ["973714476881"]
+    owners           = ["503492728717"]
     most_recent      = true
     
     filter {
@@ -22,12 +22,4 @@ output "ami_id" {
     value = data.aws_ami.joindevops.id
 }
 
-data "aws_instance" "mongodb" {
-    instance_id = "i-0627ee64a6449961f"
-  
-}
 
-output "mongodb-info" {
-    value = data.aws_instance.mongodb.public_ip
-  
-}
