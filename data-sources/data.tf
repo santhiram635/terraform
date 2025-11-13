@@ -22,4 +22,12 @@ output "ami_id" {
     value = data.aws_ami.joindevops.id
 }
 
+data "aws_instance" "mongodb" {
+    instance_id = "i-0355f99cd46d41298"  #replace with your id
+}
+
+output "mongodb_info" {
+    value = data.aws_instance.mongodb.public_ip  # we are qurrey the public ip of existing mongodb instance
+}
+
 
