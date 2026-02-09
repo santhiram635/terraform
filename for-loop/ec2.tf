@@ -1,6 +1,6 @@
 resource "aws_instance" "terraform" {
     for_each = var.instances
-  ami           = "ami-09c813fb71547fc4f"
+  ami           = "ami-00ca32bbc84273381"
   instance_type = each.value
   vpc_security_group_ids = [ aws_security_group.allow_all.id ]
 
