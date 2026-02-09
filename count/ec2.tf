@@ -1,6 +1,6 @@
 resource "aws_instance" "terraform" {
   count = 4
-  ami           = "ami-09c813fb71547fc4f"
+  ami           = "ami-00ca32bbc84273381"
   instance_type = "t3.micro"
   vpc_security_group_ids = [ aws_security_group.allow_all.id ]
 
