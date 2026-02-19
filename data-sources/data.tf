@@ -1,10 +1,10 @@
-data "aws_ami" "joindevops" {
+data "aws_ami" "example" { 
     owners           = ["973714476881"]
     most_recent      = true
     
     filter {
         name   = "name"
-        values = ["RHEL-9-DevOps-Practice"]
+        values = ["Redhat-9-DevOps-Practice"]
     }
 
     filter {
@@ -19,11 +19,11 @@ data "aws_ami" "joindevops" {
 }
 
 output "ami_id" {
-    value = data.aws_ami.joindevops.id
+    value = data.aws_ami.example.id
 }
 
 data "aws_instance" "mongodb" {
-    instance_id = "i-0355f99cd46d41298"  #replace with your id
+    instance_id = "i-03be018e35633dc4a"  #replace with your id
 }
 
 output "mongodb_info" {
